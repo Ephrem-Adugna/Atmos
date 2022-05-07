@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+       <script src="https://kit.fontawesome.com/1c9144b004.js" crossorigin="anonymous"></script>
+
+    <title>Atmos</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <script src="./index.js" defer></script>
+    <script src="./qrcode.js" defer></script>
+</head>
+<body>
+<div class="noItems" id="noItems">
+<h6 class="title">No sent items. Scan on the atmos mobile app to link a device on your network.</h6>
+<div id="qrcode"></div>
+</div>
+    <button class="devices" id="devicesbtn" onclick="showDevices()">Devices</button>
+    <div class="devicespopup" id="devices">
+<div id="qrcodedevices"></div>
+    </div>
+<div class="items" id="items">
+
+
+</div>
+
+<div class="noConnection" id="noConnection">
+<h2 class="noInttitle">No Internet Connection Found. Connect and Retry</h2>
+
+    <button class="refresh" onclick="refresh()">Retry</button>
+    </div>
+    <button class="quit" onclick="quit()">Quit</button>
+
+</body>
+</html>

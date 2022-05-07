@@ -1,0 +1,44 @@
+{
+  "name": "Atmos",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "build": {
+  "appId": "com.atmos.app",
+  "mac": {
+    "category": "public.app-category.productivity",
+    "icon": "icon.png"
+  },
+  "win": {
+    "target": [
+      "nsis",
+      {
+        "target": "portable",
+        "arch": [
+          "x64"
+        ]
+      }
+    ],
+    "icon": "icon.png"
+  },
+  "nsis":{
+    "runAfterFinish": true
+  }
+},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "electron .",
+     "app:dir": "electron-builder --dir",
+  "app:dist": "electron-builder"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^18.0.1",
+    "electron-builder": "^23.0.3"
+  },
+  "dependencies": {
+    "custom-electron-titlebar": "^4.1.0",
+    "menubar": "^9.1.2"
+  }
+}
