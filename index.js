@@ -20,8 +20,7 @@ ipcRenderer.on('SentItem', (event, arg) => {
         let from = arg.Item.from;
         itemsElem.innerHTML += `<div  class="item"><div class="copyClose"><img id="copy${items.length - 1}" class="copy" alt="copy" height=30 width=30  src="./copyImg.png"> </div><h1>Sent From "${from}"</h1><h2 class="sentText" id="${items.length - 1}">${item}</h2></div>`;
         document.getElementById(`copy${items.length - 1}`).addEventListener('click', function () {
-            var copyText = document.getElementById(items.length - 1);
-            navigator.clipboard.writeText(copyText.textContent);
+            navigator.clipboard.writeText(item);
         });
         new Notification(`Item from ${arg.Item.from}`, { body: arg.Item.item, icon: 'icon.png' })
             .onclick = () => { }
